@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 96%;
+    --foreground: 220 10% 20%;
+    --card: 220 20% 96%;
+    --card-foreground: 220 10% 20%;
+    --popover: 220 20% 96%;
+    --popover-foreground: 220 10% 20%;
+    --primary: 260 85% 65%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 15% 90%;
+    --secondary-foreground: 220 10% 20%;
+    --muted: 220 15% 90%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 300 85% 60%;
+    --accent-foreground: 220 10% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 260 85% 65%;
+    --chart-1: 260 85% 65%;
+    --chart-2: 300 85% 60%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.8rem;
+  }
+ 
+  .dark {
+    --background: 220 10% 4%;
+    --foreground: 210 20% 98%;
+    --card: 220 10% 6%;
+    --card-foreground: 210 20% 98%;
+    --popover: 220 10% 4%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 85% 65%;
+    --primary-foreground: 220 10% 20%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 210 20% 70%;
+    --accent: 210 20% 98%;
+    --accent-foreground: 220 10% 20%;
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 210 85% 65%;
+    --chart-1: 220 80% 70%;
+    --chart-2: 210 85% 65%;
+    --chart-3: 197 37% 54%;
+    --chart-4: 43 74% 56%;
+    --chart-5: 27 87% 57%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, hsl(var(--primary)), hsl(var(--accent)));
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.15;
+    filter: blur(100px);
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text;
+  }
+
+  .dark .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text;
+  }
+  
+  .glassmorphism-card {
+    @apply bg-card/50 backdrop-blur-lg border border-border/20 shadow-md transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl;
+  }
+
+  .glassmorphism-card-inset {
+     @apply bg-black/10 backdrop-blur-sm border border-border/10 shadow-inner;
+  }
+
+  .glassmorphism-button {
+    @apply bg-card/60 backdrop-blur-md border border-border/20 shadow-md hover:bg-card/80 transition-all duration-300 ease-in-out hover:scale-105;
+  }
+}

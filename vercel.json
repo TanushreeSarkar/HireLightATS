@@ -10,5 +10,14 @@
       "src": "/(.*)",
       "dest": "src/$1"
     }
+<<<<<<< HEAD
   ]
+=======
+  ],
+  "functions": {
+    "src/app/**/*.tsx": {
+      "maxDuration": 120
+    }
+  }
+>>>>>>> 099f999 (Initial Commit)
 }

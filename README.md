@@ -62,6 +62,7 @@ Hire-Light-ATScore is packed with powerhouse features to supercharge your ATS wo
 ![Premium Features](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/PremiumFeatures.png)  
 *The Premium Features page highlights exclusive tools like advanced AI scoring and multi-user collaboration, styled with Soft Teal (#4DB6AC) icons and Deep Indigo (#3F51B5) CTAs. Its grid-based design ensures accessibility across devices, with animations for a premium feel.*
 
+(Pro Tip: Check out our [demo video](https://www.youtube.com/watch?v=example) for live action!)
 
 ## 🛠️ Tech Stack – Built for Speed & Scale
 
@@ -151,8 +152,8 @@ graph TD
 - Backend (Genkit Flow in `src/ai/flows/analyze-resume.ts`) parses the resume, extracting skills, experience, and achievements.
 - Parsed data is stored in Firestore; a score is calculated based on user preferences.
 - Frontend retrieves and displays the score with visualizations (Recharts progress bars).
-- 
-## 2. Resume-JD Fit Scoring Flow
+
+#### 2. Resume-JD Fit Scoring Flow
 ```mermaid
 graph TD
     A[Upload Resume + JD] --> B[Frontend: Send to Firebase Storage]
@@ -163,7 +164,8 @@ graph TD
     F --> G[Compare Resume vs. JD]
     G --> H[Generate Fit Score + Explanation]
     H --> I[Return to Frontend]
-    I --> J[Display on Dashboard]
+    I --> J[Display on Dashboard (Donut Chart)]
+```
 
 **Explanation**:
 - User uploads both resume and JD.

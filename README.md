@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-# Firebase Studio
-
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
-=======
-```markdown
 # Hire-Light-ATScore 🚀
 
-![Hire-Light-ATScore Banner](https://via.placeholder.com/1280x400/3F51B5/FFFFFF?text=Hire-Light-ATScore%20-%20Your%20AI-Powered%20ATS%20Revolution)
+![Hire-Light-ATScore Banner](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/ATS_Banner.png)
 
 [![GitHub stars](https://img.shields.io/github/stars/TanushreeSarkar/HireLightATS?style=social)](https://github.com/TanushreeSarkar/HireLightATS/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/TanushreeSarkar/HireLightATS?style=social)](https://github.com/TanushreeSarkar/HireLightATS/network)
@@ -49,16 +41,27 @@ Hire-Light-ATScore is packed with powerhouse features to supercharge your ATS wo
 
 ## 📸 Screenshots & Demos
 
-![Dashboard Screenshot](https://via.placeholder.com/800x400/3F51B5/FFFFFF?text=Dashboard%20-%20Scores%20at%20a%20Glance)  
-*Dashboard: Your command center with charts and insights!*
+![Dashboard Screenshot](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/DashboardPage.png)  
+*The Dashboard is your hiring command center, featuring interactive Recharts visualizations (progress bars, donut charts) to display ATS scores, job match percentages, and recent activity. Designed with a clean, grid-based layout, it uses Deep Indigo (#3F51B5) for headers and CTAs, Soft Teal (#4DB6AC) for highlights, and subtle animations for a polished user experience.*
 
-![Upload Page](https://via.placeholder.com/800x400/4DB6AC/FFFFFF?text=Upload%20-%20Drag,%20Drop,%20Done!)  
-*Upload: Smooth animations make file handling fun!*
+![Upload Page](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/Uploads.png)  
+*The Upload page offers a seamless drag-and-drop experience for resumes and job descriptions, with animated progress bars to keep you engaged. Built with React Dropzone and styled with Tailwind CSS, it ensures smooth file handling across devices, highlighted by Soft Teal (#4DB6AC) accents and a clean Inter font interface.*
 
-![Fit Score Visualization](https://via.placeholder.com/800x400/F5F5F5/3F51B5?text=Fit%20Score%20-%20Visualized%20Magic)  
-*Fit Scoring: Donut charts + explanations = Hiring superpowers!*
+![Fit Score Visualization](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/LightTheme.png)  
+*The Fit Scoring page brings hiring to life with vibrant Recharts donut charts and detailed score explanations, powered by Genkit’s AI reasoning. Set against a light gray (#F5F5F5) background with Deep Indigo (#3F51B5) and Soft Teal (#4DB6AC) accents, it offers a clear, responsive view of how resumes match job descriptions, with hover effects for an intuitive experience.*
 
-(Pro Tip: Check out our [demo video](https://www.youtube.com/watch?v=example) for live action!)
+![Reports Page](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/Reports.png)  
+*The Reports page lets you download polished PDF reports with ATS scores, match percentages, and highlights. Designed with a light gray (#F5F5F5) background and Deep Indigo (#3F51B5) buttons, it uses Tailwind CSS for a clean, responsive layout with smooth transitions.*
+
+![History Page](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/Histroy.png)  
+*The History page tracks your ATS journey, displaying a log of uploaded resumes, job descriptions, and scoring activities. With a clean Inter font interface and Deep Indigo (#3F51B5) headers, it uses subtle animations to make reviewing past actions engaging and intuitive.*
+
+![HireHelper Feature](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/HireHelper.png)  
+*The HireHelper feature offers intuitive guidance for users, streamlining the hiring process with AI-driven tips and prompts. Styled with Soft Teal (#4DB6AC) accents and a light gray (#F5F5F5) background, it ensures a seamless, responsive experience across devices.*
+
+![Premium Features](https://github.com/TanushreeSarkar/HireLightATS/blob/main/img/PremiumFeatures.png)  
+*The Premium Features page highlights exclusive tools like advanced AI scoring and multi-user collaboration, styled with Soft Teal (#4DB6AC) icons and Deep Indigo (#3F51B5) CTAs. Its grid-based design ensures accessibility across devices, with animations for a premium feel.*
+
 
 ## 🛠️ Tech Stack – Built for Speed & Scale
 
@@ -82,7 +85,7 @@ Hire-Light-ATScore is designed as a modular, scalable system with a clear separa
 1. **Frontend (Next.js)**:
    - Hosted on Vercel, located in `src/app` with App Router.
    - Handles UI rendering, user interactions, and API calls.
-   - Key pages: Dashboard, Upload, Profile, Reports, Auth (Login/Signup).
+   - Key pages: Dashboard, Upload, Profile, Reports, Auth (Login/Signup), History, HireHelper, Premium Features.
    - Uses Tailwind CSS, ShadCN UI, and Recharts for visualizations.
 
 2. **Backend (Firebase + Genkit)**:
@@ -91,8 +94,8 @@ Hire-Light-ATScore is designed as a modular, scalable system with a clear separa
    - Uses Genkit Flows (`src/ai/flows`) for AI logic and Firebase Functions for serverless endpoints.
 
 3. **Database/Storage (Firebase)**:
-   - **Firestore**: Stores user profiles, preferences, and parsed data (skills, scores).
-   - **Storage**: Handles resume/JD uploads (PDF/Text).
+   - **Firestore**: Stores user profiles, preferences, parsed data (skills, scores), and activity history.
+   - **Storage**: Handles resume/JD uploads (PDF/Text) and PDF reports.
 
 4. **External APIs**:
    - Genkit AI for natural language processing and reasoning.
@@ -110,43 +113,36 @@ Below is an ASCII representation of the system architecture. For a polished visu
 | - Upload Page     |       | - Resume Parsing  |       | - Parsed Data     |
 | - Profile Page    |       | - JD Parsing      |       | - File Storage    |
 | - Reports Page    |       | - Fit Scoring     |       | - Auth Data       |
-| - Auth Pages      |       | - Report Gen      |       +-------------------+
+| - Auth Pages      |       | - Report Gen      |       | - History Logs    |
+| - History Page    |       | - Helper Prompts  |       +-------------------+
+| - HireHelper      |       +-------------------+
+| - Premium Features|       | Genkit AI (NLP)   |
 | - Visualizations  |       +-------------------+
-+-------------------+       | Genkit AI (NLP)   |
-                            +-------------------+
++-------------------+
 ```
 
 **Flow Explanation**:
-- **User Interaction**: Users access the frontend via browser, interacting with pages (e.g., Upload, Dashboard).
-- **File Upload**: Resumes/JDs are uploaded to Firebase Storage via the frontend, triggering backend API calls.
+- **User Interaction**: Users access the frontend via browser, interacting with pages (e.g., Upload, Dashboard, Reports).
+- **File Upload**: Resumes/JDs are uploaded to Firebase Storage, triggering backend API calls.
 - **AI Processing**: Backend (Genkit) parses files, extracts data, and scores fits, storing results in Firestore.
-- **Data Retrieval**: Frontend fetches parsed data/scores via API for display (e.g., charts, reports).
+- **Data Retrieval**: Frontend fetches parsed data/scores via API for display (e.g., charts, reports, history).
 - **Report Generation**: Backend generates PDFs using jsPDF, stored in Firebase Storage for download.
+- **Helper & Premium**: HireHelper provides AI-driven prompts; Premium Features include advanced scoring options.
 
 ### Flowcharts
-Below are ASCII flowcharts for key processes. Replace with visual diagrams in `docs/flowcharts/` using tools like Mermaid or PlantUML for GitHub rendering.
+Below are flowcharts for key processes, with Mermaid syntax for GitHub rendering. Save visual diagrams in `docs/flowcharts/` using tools like Mermaid or PlantUML.
 
 #### 1. Resume Upload & Scoring Flow
-```
-Start
-  |
-  v
-[User Uploads Resume] ----> [Frontend: Send to Firebase Storage]
-  |                           |
-  v                           v
-[Backend: Trigger Genkit Flow] <--- [Storage: File Saved]
-  |
-  v
-[Parse Resume (Skills, Exp)] ----> [Store Parsed Data in Firestore]
-  |
-  v
-[Calculate Score] ----> [Return Score to Frontend]
-  |
-  v
-[Display Score on Dashboard]
-  |
-  v
-End
+```mermaid
+graph TD
+    A[User Uploads Resume] --> B[Frontend: Send to Firebase Storage]
+    B --> C[Storage: File Saved]
+    C --> D[Backend: Trigger Genkit Flow]
+    D --> E[Parse Resume (Skills, Exp)]
+    E --> F[Store Parsed Data in Firestore]
+    F --> G[Calculate Score]
+    G --> H[Return Score to Frontend]
+    H --> I[Display Score on Dashboard]
 ```
 
 **Explanation**:
@@ -155,29 +151,19 @@ End
 - Backend (Genkit Flow in `src/ai/flows/analyze-resume.ts`) parses the resume, extracting skills, experience, and achievements.
 - Parsed data is stored in Firestore; a score is calculated based on user preferences.
 - Frontend retrieves and displays the score with visualizations (Recharts progress bars).
-
-#### 2. Resume-JD Fit Scoring Flow
-```
-Start
-  |
-  v
-[Upload Resume + JD] ----> [Frontend: Send to Firebase Storage]
-  |                           |
-  v                           v
-[Backend: Parse Resume + JD] <--- [Storage: Files Saved]
-  |                           |
-  v                           v
-[Extract Skills/Reqs] ----> [Store in Firestore]
-  |
-  v
-[Compare Resume vs. JD] ----> [Generate Fit Score + Explanation]
-  |
-  v
-[Return to Frontend] ----> [Display on Dashboard (Donut Chart)]
-  |
-  v
-End
-```
+- 
+## 2. Resume-JD Fit Scoring Flow
+```mermaid
+graph TD
+    A[Upload Resume + JD] --> B[Frontend: Send to Firebase Storage]
+    B --> C[Storage: Files Saved]
+    C --> D[Backend: Parse Resume + JD]
+    D --> E[Extract Skills/Reqs]
+    E --> F[Store in Firestore]
+    F --> G[Compare Resume vs. JD]
+    G --> H[Generate Fit Score + Explanation]
+    H --> I[Return to Frontend]
+    I --> J[Display on Dashboard]
 
 **Explanation**:
 - User uploads both resume and JD.
@@ -186,26 +172,14 @@ End
 - Results are stored in Firestore and displayed on the frontend with visualizations.
 
 #### 3. Report Generation Flow
-```
-Start
-  |
-  v
-[User Requests Report] ----> [Frontend: Call Backend API]
-  |
-  v
-[Backend: Fetch Data from Firestore]
-  |
-  v
-[Generate PDF with jsPDF] ----> [Store PDF in Firebase Storage]
-  |
-  v
-[Return Download Link to Frontend]
-  |
-  v
-[User Downloads PDF]
-  |
-  v
-End
+```mermaid
+graph TD
+    A[User Requests Report] --> B[Frontend: Call Backend API]
+    B --> C[Backend: Fetch Data from Firestore]
+    C --> D[Generate PDF with jsPDF]
+    D --> E[Store PDF in Firebase Storage]
+    E --> F[Return Download Link to Frontend]
+    F --> G[User Downloads PDF]
 ```
 
 **Explanation**:
@@ -272,7 +246,12 @@ End
            "src": "/(.*)",
            "dest": "src/$1"
          }
-       ]
+       ],
+       "functions": {
+         "src/app/**/*.tsx": {
+           "maxDuration": 120
+         }
+       }
      }
      ```
 
@@ -295,7 +274,7 @@ We love contributions! Fork, branch, PR – let's build together:
 - **Pull Requests**: Follow our [CONTRIBUTING.md](CONTRIBUTING.md).
 - **Code Style**: ESLint + Prettier enforced.
 
-Shoutout to contributors: @TanushreeSarkar (OWNER) more.... (coming soon!) 🌟
+Shoutout to contributors: @yourname (coming soon!) 🌟
 
 ## 📜 License
 
@@ -308,5 +287,3 @@ MIT License – Free to use, modify, and distribute. See [LICENSE](LICENSE) for 
 - **Roadmap**: AI enhancements, multi-user support, integrations (e.g., LinkedIn API) – star & watch for updates! ⭐
 
 **Star this repo if Hire-Light-ATScore lights up your hiring game!** 💥 Questions? Open an issue or DM me. Let's make recruitment epic! 🎊
-```
->>>>>>> 099f999 (Initial Commit)

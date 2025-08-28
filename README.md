@@ -17,7 +17,7 @@ Welcome to **Hire-Light-ATScore** – the ultimate Applicant Tracking System (AT
 
 With interactive dashboards, real-time scoring, customizable profiles, and silky-smooth animations, Hire-Light-ATScore is built for *impact*. It’s wrapped in a modern, responsive design that shines on any device. Ready to make hiring *lit*? Let’s dive in! 🎉
 
-**Live Demo:** [Try Hire-Light-ATScore Now!](https://hire-light-atscore.vercel.app/)  
+**Live Demo:** [Try Hire-Light-ATScore Now!](https://hire-light-ats.vercel.app/)  
 **Project Status:** Actively Developed | Version 1.0 (August 2025 Release)
 
 ## 🎯 Key Features That Blow Your Mind
